@@ -4,13 +4,41 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <meta property="og:type" content="website">
+  <meta name="og:title" content="Happy Valentine 2024">
+  <meta name="og:description" content="For those who (in 2024) didn't have a Valentine.">
+  <meta name="og:image" content="Heart_GIF_Animation.gif">
+  <meta name="og:url" content="https://nathaniel.world/valentine2024">
+  
+  
+  <title>Valentine 2024</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="icon" href="/image.png" type="image/png">
 </head>
 
 <body>
-  Hello world
-  <script src="script.js"></script>
+  <div class="container">
+    <div class="heart">
+    </div>
+  </div>
+  <script>
+    function rain(){
+      let heart = document.querySelector('.heart');
+      let e = document.createElement('div');
+      e.classList.add('drop');
+      heart.appendChild(e);
+
+      let left = Math.floor(Math.random() * 300);
+      e.style.left = left + 'px';
+
+      setTimeout(function(){
+        heart.removeChild(e)
+      },5000)
+    }
+    setInterval(function(){
+      rain()
+    },50);
+  </script>
 </body>
 
 </html>
